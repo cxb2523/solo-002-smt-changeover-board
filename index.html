@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMT 换线计划看板</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SMT 换线计划看板</h1>
+    <div id="stats" class="stats"></div>
+  </header>
+
+  <section id="errors" class="errors hidden">
+    <h2>导入校验问题</h2>
+    <ul id="error-list"></ul>
+  </section>
+
+  <main>
+    <aside class="orders-panel">
+      <h2>订单顺序（可拖动，加急自动优先上机）</h2>
+      <ul id="orders" class="orders"></ul>
+    </aside>
+
+    <section class="lanes-panel">
+      <h2>分机结果与时间轴</h2>
+      <div id="machine-summary" class="machine-summary"></div>
+      <svg id="lanes" role="img" aria-label="机台时间轴"></svg>
+      <div id="detail" class="detail hidden"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
